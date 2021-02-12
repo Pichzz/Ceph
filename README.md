@@ -22,15 +22,15 @@ For security reasons, we need to turn on the firewall on all servers.
 
 - For ceph monitor node
     
-    sudo ufw allow 6789/tcp
+        sudo ufw allow 6789/tcp
     
-    sudo ufw enable
+        sudo ufw enable
  
 - For ceph osd node
     
-   sudo ufw allow 6800:7300/tcp
+        sudo ufw allow 6800:7300/tcp
    
-   sudo ufw enable
+        sudo ufw enable
     
 
 
