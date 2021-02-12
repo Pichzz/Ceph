@@ -12,13 +12,13 @@ For security reasons, we need to turn on the firewall on all servers.
     
 - For ceph admin node
     
-    sudo apt-get install -y ufw
+        sudo apt-get install -y ufw
     
-    sudo ufw allow 2003/tcp
+        sudo ufw allow 2003/tcp
     
-    sudo ufw allow 4505:4506/tcp
+        sudo ufw allow 4505:4506/tcp
     
-    sudo ufw enable
+        sudo ufw enable
 
 - For ceph monitor node
     
