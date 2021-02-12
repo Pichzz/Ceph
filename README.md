@@ -55,5 +55,16 @@ For security reasons, we need to turn on the firewall on all servers.
  - Now deploy the monitor node on the node-1
  
         ceph-deploy mon create-initial
+ 
+#### 3. Adding OSDS to the Cluster
+Ceph provide two backend object storage, FileStore and BlueStore (Default is Bulestore).
+In the step you also can place data and metadata at the same location or seperated.
 
+- Bluestore Usage:
+        
+        ceph-deploy disk create --data DISK HOST
+        
+- Filestore Usage:
+        
+        ceph-deploy osd create --data DISK --journal JOURNAL HOST
   
