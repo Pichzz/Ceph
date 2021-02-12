@@ -31,8 +31,20 @@ For security reasons, we need to turn on the firewall on all servers.
         sudo ufw allow 6800:7300/tcp
    
         sudo ufw enable
-    
+        
+#### 2. Intallation
+ - From ceph admin node
 
+        sudo apt-get install ceph-deploy
+        
+ - Create new monitor
+        
+        ceph-deploy new mon1 (The command will generate the Ceph cluster configuration file 'ceph.conf' in cluster directory.)
+  
+ - Edit ceph.conf file
+ 
+        # Your network address
+        public network = 10.0.15.0/24
 
 
   
