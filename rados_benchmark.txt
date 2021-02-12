@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# RBD Variables
+
+rbdPool=data
+objectsize=$1
+
+#rbdWriteInterval=10
+#rbdReadInterval=$3
+
+# First, we delete old benchmark data
+
+#echo "Removing old benchmark data..."
+#rados -p $rbdPool cleanup --prefix benchmark_data
+
+# Perform write benchmark
+
+
+rados bench -p $rbdPool 10 write -b $1 -t 128 -o 1M
+
+# Perform read benchmark (sequential)
+
+#rados bench -p $rbdPool $3 seq
+
+# Perform read benchmark (random)
+
+#rados bench -p $rbdPool $3 rand
+
+# Remove old benchmark objects
+
+#echo "Removing benchmark data just used..."
+#rados -p $rbdPool cleanup --prefix benchmark_data
+cephd@node-1:~$ vim rados.sh
+#!/bBD Variables
+
+rbdPool=data
+objectsize=$1
+
+#rbdWriteInterval=10
+#rbdReadInterval=$3
+
+# First, we delete old benchmark data
+
+#echo "Removing old benchmark data..."
+#rados -p $rbdPool cleanup --prefix benchmark_data
+
+# Perform write benchmark
+
+
+rados bench -p $rbdPool 10 write -b $1 -t 128 -o 1M
+
+# Perform read benchmark (sequential)
+
+#rados bench -p $rbdPool $3 seq
+
+
+# RBD Variables

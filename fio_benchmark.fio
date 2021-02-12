@@ -1,0 +1,42 @@
+[global]
+ioengine=rbd
+clientname=client1
+pool=data
+sync=0
+buffered=0
+
+rw=randwrite
+bs=4K
+direct=1
+#runtime=5000
+iodepth=128
+
+[client 1]
+filename= "client1"
+rbdname=image1
+size=50M
+#--------------------
+#[client 2]
+#filename= "client2"
+#rbdname=image2
+#size=500M
+
+#[client 3]
+#filename= "client3"
+#rbdname=image3
+#size=500M
+
+#[client 4]
+#filename ="client4"
+#rbdname=image4
+#size=500M
+
+#[client 5]
+#filename = "client5"
+#rbdname=image5
+#size=500M
+
+#[client 6]
+#filename = "client6"
+#rbdname=image6
+#size=500M
