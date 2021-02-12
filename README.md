@@ -38,6 +38,7 @@ For security reasons, we need to turn on the firewall on all servers.
         sudo apt-get install ceph-deploy
         
  - Create new monitor
+        
         #The command will generate the Ceph cluster configuration file 'ceph.conf' in cluster directory.
         ceph-deploy new mon1
   
