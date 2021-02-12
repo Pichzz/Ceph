@@ -38,13 +38,21 @@ For security reasons, we need to turn on the firewall on all servers.
         sudo apt-get install ceph-deploy
         
  - Create new monitor
-        
-        ceph-deploy new mon1 (The command will generate the Ceph cluster configuration file 'ceph.conf' in cluster directory.)
+        #The command will generate the Ceph cluster configuration file 'ceph.conf' in cluster directory.
+        ceph-deploy new mon1
   
  - Edit ceph.conf file
  
         # Your network address
         public network = 10.0.15.0/24
-
+ 
+ - Then install Ceph on all nodes from the ceph admin node with a single command.
+        
+        #The command will automatically install Ceph on all nodes
+        ceph-deploy install ceph-admin node-1 node-2 node-3 node-4
+        
+ - Now deploy the monitor node on the node-1
+ 
+        ceph-deploy mon create-initial
 
   
