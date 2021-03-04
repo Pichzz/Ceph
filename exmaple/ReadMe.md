@@ -14,8 +14,4 @@ Quick Run Code
 #### 2. Compile the source
  
 
-        g++ -g -c connectToRados.cc -o connectToRados.o
-        
-  or 
-        
-        g++ -g connectToRados.o -lrados -o connectToRados
+        g++ -g connectToRados.cc -lrados -o connectToRados -std=c++11
