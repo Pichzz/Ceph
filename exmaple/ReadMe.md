@@ -14,8 +14,8 @@ Quick Run Code
 #### 2. Compile the source
  
 
-        g++ -g -c ceph-client.cc -o ceph-client.o
+        g++ -g -c connectToRados.cc -o connectToRados.o
         
   or 
         
-        g++ -g ceph-client.o -lrados -o ceph-client
+        g++ -g connectToRados.o -lrados -o connectToRados
